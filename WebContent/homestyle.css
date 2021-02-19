@@ -1,0 +1,550 @@
+ str-style,
+section#one .title text,
+section#one .title path {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 1000;
+  animation: dash 4s linear forwards;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+} 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: #1d1e22;
+} 
+::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background-color: #312d3c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #df2359;
+}
+a {
+  text-decoration: none;
+  color: #400040;
+} /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+a:hover,
+a.leadlink {
+  color: #c0c0c0;
+}
+h1,
+h2,
+header a {
+  text-transform: uppercase;
+} 
+.smooth {
+  margin: 0 auto;
+  padding: 0 4px;
+  padding-left: 8px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+} 
+
+header,
+footer {
+  position: relative;
+  padding: 2em 3em;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 10vh;
+  background-color: midnightblue;
+} 
+header h3 {
+  position: relative;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+header ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1em 0;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+  margin: 0 1em;
+  transition: all 0.2s linear;
+} 
+
+header ul li a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+header ul li::before {
+  position: absolute;
+  content: '';
+  top: calc(100% + 4px);
+  left: 0;
+  width: 20px;
+  height: 2px;
+   /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+  background-color: #ffffff;
+  transform-origin: 0 100%;
+  transform: rotate(-5deg);
+  transition: all 0.2s ease-out;
+}
+header ul li:hover::before {
+  width: 100%;
+  background-color: #c0c0c0;
+}
+.grid {
+  display: grid;
+  grid-gap: 2em;
+} 
+.grid.g_two {
+  grid-template-columns: 1fr minmax(300px, auto);
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.flex.column {
+  flex-flow: column wrap;
+  justify-content: space-between;
+} /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+.jcsb {
+  justify-content: space-between;
+}
+
+progress {
+  position: relative;
+  margin: 1em 0;
+}
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+
+  max-width: 360px;
+  height: 1px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #666;
+  border-radius: 1em;
+}
+progress::-webkit-progress-value {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  background-color: #df2359;
+  border-radius: 1em;
+  height: 5px;
+}
+
+section {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  padding: 2em 3em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+
+  border-radius: 1em;
+  background-color: #ffffff;
+}
+section:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+section#one {
+  
+  background-position: center;
+  background-size: cover;
+  color: #400040;
+} /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+section#one h1 {
+  visibility: hidden;
+  opacity: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0;
+}
+
+section#one .title {
+  min-width: 350px;
+  max-height: 80px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+} 
+section#one .title text {
+  letter-spacing: 1px;
+  fill: none;
+  stroke: midnightblue;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+section#one .title path {
+  stroke: #ffffff;
+  stroke-width: 4;
+  animation-delay: 1s;
+} /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+section#one::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+ 
+}
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+section#two .blocks {
+  padding: 2em 0;
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+section#two .blocks .block {
+	
+  margin: 0 auto;
+  display: flex;
+  width: 24%;
+  height: 675px;
+   /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #0000a0;
+  border-radius: 1em;
+  background-color: #ffffff;
+  transition: all 0.2s linear;
+}
+ section#two .button {
+         border: none;
+         outline: 0;
+         display: inline-block;
+         padding: 8px;
+         color: white;
+         background-color: midnightblue;
+         text-align: center;
+         cursor: pointer;
+         width: 100%;
+         }
+ section#two .button:hover {
+         background-color: gray;
+         color: black;
+         }
+          section#two .button:active{
+         backoground-color:blue;
+         color: white;
+         }
+section#two .blocks .block:hover {
+  transform: translateY(-10px);
+  background-color: #c0c0c0;
+} 
+
+
+section h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+section h2 span {
+  color: midnightblue;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.content p.lead {
+  font-size: 1.25rem;
+} /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+.content .blur {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  margin-left: 2em;
+  padding: 1em;
+  width: 100%;
+  height: 350px;
+  border-radius: 0.35em;
+}
+.content .blur::before {
+  position: absolute;
+  content: '';
+  top: -25%;
+  left: -25%;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;*/
+  width: 150%;
+  height: 150%;
+  box-shadow: inset 0 0 0 600px rgba(255,255,255,0.3);
+  filter: blur(10px);
+}
+
+form {
+  position: relative;
+  z-index: 3;
+  padding: 1em;
+  display: flex;
+  width: 100%;
+   /*game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid #400040;
+  border-radius: 0.35em;
+}
+h3 img {
+  width: 54px;
+  height: 64px;
+} 
+
+form input,
+form #role-select {
+  margin-bottom: 1em;
+  min-height: 3em;
+  font-size: 1em;
+  color: #400040;
+  border: 0;
+  border-bottom: 2px solid #400040;
+  background: none;
+}
+form input::placeholder {
+  position: relative;
+  top: 0;
+  color: inherit;
+  transition: all 0.2s linear;
+}
+
+form input:focus {
+  outline: none;
+}
+form input:focus::placeholder {
+  top: -1.25em;
+  font-size: 0.825rem;
+}
+form .button {
+  position: relative;
+  margin-top: 1em;
+  padding: 1em 3em;
+  text-transform: uppercase;
+  display: block;
+  font-size: 1rem;
+  /* game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+  border-radius: 0.35em;
+  background-color: midnightblue;
+}
+
+footer {
+  padding-bottom: 1em;
+  width: 100%;
+  min-height: 35vh;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #ffffff;
+} /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+footer h3 {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer h3::before {
+  position: absolute;
+  content: '';
+  top: calc(100% + 4px);
+  left: 0;
+  width: 20px;
+  height: 2px;
+
+  background-color: midnightblue;
+  transform-origin: 0 100%;
+  transform: rotate(-5deg);
+  transition: all 0.2s ease-out;
+}
+footer h5 {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+footer h5.follow {
+  color: midnightblue;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+   /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+  padding: 0;
+}
+footer ul li {
+  line-height: 1.5;
+  transition: transform 200ms ease-in;
+  will-change: transform;
+}
+footer ul li:hover {
+  transform: translateX(5px);
+}
+
+footer .widgets,
+footer .copy {
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+  align-items: center;
+}
+footer .widgets .widget,
+footer .copy .widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .copy {
+  margin-top: 1em;
+  border-top: 2px solid midnightblue;
+} /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+footer .copy p {
+  margin: 0.75em 0 0;
+}
+footer .copy span {
+  position: relative;
+  display: inline-block;
+  color: midnightblue;
+  animation: hearts 0.6s cubic-bezier(0.18, 0.89, 0.29, 1.05) infinite;
+}
+
+@media (max-width: 991px) {
+  .blur {
+    display: none;
+  }/*@-o-keyframes dash {
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }*/
+  .content {
+    text-align: center;
+  }
+  .content h1::before {
+    display: none;
+  }
+}
+@-moz-keyframes hearts {
+  50% {
+    transform: scale(1.4);
+  }
+}/*@-o-keyframes dash {
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }*/
+@-webkit-keyframes hearts {
+  50% {
+    transform: scale(1.4);
+  }
+}
+@-o-keyframes hearts {
+  50% {
+    transform: scale(1.4);
+  }
+}
+
+@keyframes hearts {
+  50% {
+    transform: scale(1.4);
+  } /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+}
+@-moz-keyframes dash {
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+}
+@-webkit-keyframes dash {
+  90% {
+    stroke-dashoffset: 0;
+  } /*game.style.width = width + 'px'game.style.height = height + 'pxhero.style.top = height - 80 + 'px'hero.style.left = halfWidth - ASSETS.IMAGE.HERO.width / 2 + 'px'hero.style.background = `url(${ASSETS.IMAGE.HERO.src})`hero.style.width = `${ASSETS.IMAGE.HERO.width}px`hero.style.height = `${ASSETS.IMAGE.HERO.height}px`*/
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+}
+@-o-keyframes dash {
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+} 
+@keyframes dash {
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+} 

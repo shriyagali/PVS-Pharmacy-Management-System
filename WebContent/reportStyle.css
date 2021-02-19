@@ -1,0 +1,124 @@
+@charset "ISO-8859-1";
+body {margin:0;}
+#form_pvs {
+  width:200px;
+  padding:20px;
+  box-sizing: border-box;
+}
+
+input[type=text] {
+  padding:10px;
+  margin:10px 0; 
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  border: 2px solid #eee;
+  border:0; 
+  border-bottom:1px solid #eee; 
+  width:45%;
+}
+
+input[type=number] {
+  padding:10px;
+  margin:10px 0; 
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  border: 2px solid #eee;
+  border:0; 
+  border-bottom:1px solid #eee; 
+  width:45%;
+}
+input[type=date] {
+  padding:10px;
+  margin:10px 0; 
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  border: 2px solid #eee;
+  border:0; 
+  border-bottom:1px solid #eee; 
+  width:45%;
+  transition: .3s border-color;
+}
+
+input, textarea {
+  font-family:inherit;
+  font-size: inherit;
+}
+
+input[type=submit] {
+
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+
+  /* usual styles */
+  padding:10px;
+  border:none;
+  background-color: midnightblue;
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  width:10%;
+  
+
+}
+
+input[type=reset] {
+
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+
+  /* usual styles */
+  padding:10px;
+  border:none;
+  background-color:midnightblue;
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  width:10%;
+
+}
+
+label {
+  display:block;
+}
+input:required + span:after {
+  content: "Required";
+}
+
+.column
+{
+    float: left;
+    width: 33%;
+}
+
+ 
+ 
+.navbar {
+  overflow: hidden;
+  background-color: midnightblue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
